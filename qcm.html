@@ -1,0 +1,91 @@
+<html>
+<head>
+    <style type="text/css">
+    .pre{
+        margin-left: 3.1%;
+    }
+    .deu{
+        margin-left: 2.9%;
+    }
+    .tro{
+        margin-left: 0.5%;
+    }
+    legend{
+        font-size: large;
+        color: navy;
+
+    }
+    p{
+     text-align: center;  
+    }
+    </style>  
+</head>
+    <body>
+        Mr Moussa LY: <br>
+        Technicien superieur de Technologie informatique <br>
+       <p> Cochez les bonnes reponses,toute reponse trouvee vous aurez 4 points <br>
+        A contrario si vous cochez une reponse fausse vous perdez 2 points <br> </p>
+        <p>Bonne chance</p>
+
+    <script language="javascript">
+
+     function qcm(){
+     var somme=0;
+     for(var i=0; i< document.forms.length; i++){
+        for(var j=0;j<document.forms[i].rep.length;j++){
+            
+            if(document.forms[i].rep[j].checked && document.forms[i].rep[j].value=="vrai"){
+                 somme= somme+4;
+            if(document.forms[i].rep[j].checked && document.forms[i].rep[j].value=="faux")
+                somme=somme-2;
+            }
+        }
+       
+    }
+     alert("Vous avez "+somme+"/"+20 );
+
+
+  }
+   </script>
+
+    </body>
+    <form>
+        <fieldset>
+    	<legend>Qui est le fondateur de Apple</legend> <br>
+    	<label class="pre">Bill Gates</label><input type="checkbox" name="rep" value="faux"><br>
+    	<label class="deu">Steve Jobs</label><input type="checkbox" name="rep" value="vrai"> <br>
+        <label class="tro"> Steve</label> Wozniak <input type="checkbox" name="rep" value="faux"> <br><br>
+       </fieldset><br>  
+    </form>
+    <form>
+        <fieldset>
+        <legend>Qui est le fondateur de Microsoft</legend> <br>
+        <label class="deu">Paul ALen</label><input type="checkbox" name="rep" value="faux"> <br>
+        <label class="pre">Bill Gates</label><input type="checkbox" name="rep" value="vrai"><br>
+        <label class="deu">Steve Jobs</label><input type="checkbox" name="rep" value="faux"> <br>
+        <label class="tro"> Steve</label> Wozniak <input type="checkbox" name="rep" value="faux"> <br><br>
+
+       </fieldset><br>
+        
+    </form>
+    <form>
+        <fieldset>
+        <legend>Quels sont les langages objet</legend> <br>
+        <label style=margin-left:6% >C</label><input type="checkbox" name="rep" value="faux"> <br>
+        <label style=margin-left:3.8%>Pascal</label><input type="checkbox" name="rep" value="faux"><br>
+        <label style=margin-left:4.7% >Java</label><input type="checkbox" name="rep" value="vrai"> <br>
+        <label style=margin-left:4.5%>PHP</label><input type="checkbox" name="rep" value="vrai"> <br><br>
+
+       </fieldset><br>
+    </form>
+    <form>
+        <fieldset>
+        <legend>En quelle annee est apparu le langage javascript</legend> <br>
+        <label style=margin-left:5% >2005</label><input type="checkbox" name="rep" value="faux"> <br>
+        <label style=margin-left:5%>1997</label><input type="checkbox" name="rep" value="faux"><br>
+        <label style=margin-left:5%>1993</label><input type="checkbox" name="rep" value="faux"> <br>
+        <label style=margin-left:5%>1995</label><input type="checkbox" name="rep" value="vrai"> <br><br>
+       </fieldset><br>
+       <input type=submit name="bouton" value="Enregistrer" onClick=qcm()> 
+    </form>
+      
